@@ -1,0 +1,220 @@
+/* ===============================
+   ESTILOS GERAIS PARA TELA
+   =============================== */
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.page-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+header {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 3rem;
+}
+
+header h2 {
+  margin-top: 0.5rem;
+  font-weight: 300;
+}
+
+.intro {
+  margin-bottom: 2rem;
+}
+
+.sidebar {
+  width: 300px;
+  background-color: #e0e0e0;
+  padding: 1rem;
+  border-left: 4px solid #ccc;
+}
+
+.main {
+  flex: 1;
+}
+
+h3 {
+  color: #2c3e50;
+}
+
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Remove indentação inicial dos parágrafos */
+p {
+  text-indent: 0;
+  margin-bottom: 1rem;
+}
+
+
+/* ===============================
+   LAYOUT MOBILE (TELAS < 768px)
+   =============================== */
+@media screen and (max-width: 768px) {
+  .page-wrapper {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    border: none;
+  }
+
+  .design-selection {
+    position: static;
+    float: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .main.supporting {
+    display: flex;
+    flex-direction: column;
+  }
+
+  header {
+    height: auto;
+    padding: 1.5rem;
+  }
+
+  p {
+    text-indent: 0;
+    margin-left: 0;
+  }
+}
+
+
+/* ===============================
+   ESTILOS PARA IMPRESSÃO
+   =============================== */
+@media print {
+  body {
+    font-family: "Times New Roman", Times, serif;
+    color: black;
+    background: white;
+  }
+
+  header {
+    background-color: white !important;
+    color: black !important;
+  }
+
+  header h1, header h2 {
+    color: black !important;
+  }
+
+  .sidebar,
+  .extra1, .extra2, .extra3, .extra4, .extra5, .extra6,
+  .zen-validate-html, .zen-validate-css,
+  .zen-license, .zen-accessibility, .zen-github {
+    display: none;
+  }
+}
+/* Requisito 1: Customização dos links */
+
+/* Link padrão: cor de destaque e negrito */
+a {
+  color: #cc008fb6; /* cor de destaque */
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Ao passar o mouse (hover): cor mais escura */
+a:hover {
+  color: #d8afc875;
+}
+
+/* Link visitado: não fica mais em negrito */
+a:visited {
+  color: #001182; /* tonalidade diferenciada para links visitados */
+  font-weight: normal;
+}
+
+/* === PRIMEIRA LETRA DO PRIMEIRO PARÁGRAFO DA SEÇÃO PRINCIPAL === */
+#zen-supporting > div:first-child p:first-of-type::first-letter {
+  font-size: 300%; /* 3x maior */
+  font-family: 'Georgia', serif; /* fonte diferente da do site */
+  float: left; /* flutua à esquerda */
+  line-height: 1;
+  padding-right: 5px;
+  margin-top: 5px;
+}
+
+
+/* === BORDAS ENTRE ITENS DO MENU DE DESIGN === */
+
+/* Aplica borda superior a todos os itens */
+#design-selection li {
+  border-top: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+/* Aplica borda inferior apenas ao último item */
+#design-selection li:last-child {
+  border-bottom: 1px solid #ccc;
+}
+/* 1. Aspectos gerais */
+    body {
+      width: 960px;
+      margin: 0 auto;
+      font-family: sans-serif;
+    }
+
+    p {
+      text-indent: 1em;
+    }
+
+    /* 2. Títulos */
+    h1, h2, h3 {
+      text-align: center; /* Pode usar 'right' se preferir */
+    }
+
+    h1 {
+      font-size: 1.8rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+    }
+
+    /* 3. Seções de resumo e principal */
+    #zen-summary {
+      text-align: center;
+    }
+
+    #zen-preamble p {
+      line-height: 1.5;
+    }
+
+    /* 4. Abreviaturas */
+    abbr {
+      font-variant: small-caps;
+    }
